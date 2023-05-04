@@ -66,17 +66,20 @@ namespace Modules.Core.Custom.Initializing
             var tasks = new List<Subtask>();
 
             tasks.AddRange(_before);
-
-            //TODO!!!!!!!!
-            //tasks.Add(new LoadDataBaseTask(_dataBaseManager));
-            tasks.Add(new LoadDataBaseTask(ComponentLocator.Resolve<DataBaseManager>()));
-            //...
-            tasks.Add(new LoadSceneTask("Dungeon"));
-            //...
-
+            FillTasksList(ref tasks);
             tasks.AddRange(_after);
 
             return tasks;
+        }
+
+        private void FillTasksList(ref List<Subtask> tasks)
+        {
+            //TODO!!!!!!!!
+
+            tasks.Add(new LoadDataBaseTask(ComponentLocator.Resolve<DataBaseManager>()));
+            //...
+            //tasks.Add(new LoadSceneTask("Dungeon"));
+            //...
         }
 
         private void TryStartTask()
