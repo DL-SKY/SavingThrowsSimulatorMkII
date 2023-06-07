@@ -82,16 +82,16 @@ namespace Modules.Core.Initializing
         {
             var tasks = new List<Subtask>();
 
-            var updater = ComponentLocator.Resolve<Updater>();
             //todo: temp ======
-            for (int i = 0; i < 2; i++)
-                tasks.Add(new PauseTask(updater, 0.1f, 1));
+            var updater = ComponentLocator.Resolve<Updater>();
+            for (int i = 0; i < 10; i++)
+                tasks.Add(new PauseTask(updater, 0.2f, 1));
             //=================
 
-            tasks.Add(new PauseTask(updater, 0.1f));
+            //tasks.Add(new PauseTask(updater, 0.1f));
 
-            //var windowsManager = ComponentLocator.Resolve<WindowsManager>();
-            //tasks.Add(new CloseViewTask(windowsManager, typeof(PreloaderView)));
+            var windowsManager = ComponentLocator.Resolve<WindowsManager>();
+            tasks.Add(new CloseViewTask(windowsManager, typeof(PreloaderView)));
 
             return tasks;
         }
