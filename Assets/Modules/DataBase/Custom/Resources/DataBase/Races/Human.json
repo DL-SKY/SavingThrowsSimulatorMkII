@@ -1,0 +1,20 @@
+{
+	"Visual": {
+		"Name": "",
+		"Description": ""
+	},
+	"Bonus": [
+		{
+			"Type": 100,
+			"Value": 1
+		},
+		{
+			"Type": 1,
+			"Value": 1
+		},
+		{
+			"Type": 2,
+			"Value": 1
+		}
+	]
+}

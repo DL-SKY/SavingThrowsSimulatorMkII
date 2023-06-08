@@ -10,7 +10,11 @@ namespace Modules.Custom.DataBase
     {
         public Dictionary<string, CellData> Cells = new Dictionary<string, CellData>();
         public Dictionary<string, GameplayData> GameplaySettings = new Dictionary<string, GameplayData>();
-        public Dictionary<string, UnitData> Units = new Dictionary<string, UnitData>();        
+        public Dictionary<string, UnitData> Units = new Dictionary<string, UnitData>();
+                
+        public Dictionary<string, RaceData> Races = new Dictionary<string, RaceData>();
+        public Dictionary<string, ClassData> Classes = new Dictionary<string, ClassData>();
+        public Dictionary<string, EventData> Events = new Dictionary<string, EventData>();
 
 
         public override void Init(Action completedCallback, Action<int> failedCallback)
@@ -28,25 +32,54 @@ namespace Modules.Custom.DataBase
             LoadGameplaySettings();
             LoadUnits();
 
+            LoadRaces();
+            LoadClasses();
+            LoadEvents();
+
             _completedCallback?.Invoke();
         }
 
+        [Obsolete]
         private void LoadCells()
         {
             var assets = Resources.LoadAll<TextAsset>(Path.Combine(_databasePath, "Cells"));
             FillDictionary(Cells, assets);
         }
 
+        [Obsolete]
         private void LoadGameplaySettings()
         {
             var assets = Resources.LoadAll<TextAsset>(Path.Combine(_databasePath, "GameplaySettings"));
             FillDictionary(GameplaySettings, assets);
         }
 
+        [Obsolete]
         private void LoadUnits()
         {
             var assets = Resources.LoadAll<TextAsset>(Path.Combine(_databasePath, "Units"));
             FillDictionary(Units, assets);
+        }
+
+        private void LoadRaces()
+        {
+            var assets = Resources.LoadAll<TextAsset>(Path.Combine(_databasePath, "Races"));
+            FillDictionary(Races, assets);
+        }
+
+        private void LoadClasses()
+        {
+            var assets = Resources.LoadAll<TextAsset>(Path.Combine(_databasePath, "Classes"));
+            FillDictionary(Classes, assets);
+            foreach (var race in Classes)
+                race.Value.Initialize();
+        }
+
+        private void LoadEvents()
+        {
+            var assets = Resources.LoadAll<TextAsset>(Path.Combine(_databasePath, "Events"));
+            FillDictionary(Events, assets);
+            foreach (var e in Events)
+                FillProperty(e.Value.Content);
         }
     }
 }

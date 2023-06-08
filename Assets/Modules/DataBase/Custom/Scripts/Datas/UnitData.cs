@@ -3,6 +3,7 @@ using System;
 
 namespace Modules.DataBase.Custom.Datas
 {
+    [Obsolete]
     [Serializable]
     public class UnitData : DataBaseData
     {

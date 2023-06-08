@@ -1,0 +1,70 @@
+{
+	"Visual": {
+		"Name": "",
+		"Description": ""
+	},
+	"MainParameter": 3,
+	"HitDice": 8,
+	"Bonus": [
+		{
+			"Level": 1,
+			"Bonus": [
+				{"Type": 100, "Value": 2}, {"Type": 1, "Value": -2}, {"Type": 2, "Value": 0}, {"Type": 3, "Value": 2}, {"Type": 4, "Value": 1}
+			]
+		},
+		{
+			"Level": 2,
+			"Bonus": [
+				{"Type": 100, "Value": 2}, {"Type": 1, "Value": -2}, {"Type": 2, "Value": 0}, {"Type": 3, "Value": 2}, {"Type": 4, "Value": 1}
+			]
+		},
+		{
+			"Level": 3,
+			"Bonus": [
+				{"Type": 100, "Value": 2}, {"Type": 1, "Value": -2}, {"Type": 2, "Value": 0}, {"Type": 3, "Value": 2}, {"Type": 4, "Value": 1}
+			]
+		},
+		{
+			"Level": 4,
+			"Bonus": [
+				{"Type": 100, "Value": 2}, {"Type": 1, "Value": -2}, {"Type": 2, "Value": 0}, {"Type": 3, "Value": 2}, {"Type": 4, "Value": 1}
+			]
+		},
+		{
+			"Level": 5,
+			"Bonus": [
+				{"Type": 100, "Value": 2}, {"Type": 1, "Value": -2}, {"Type": 2, "Value": 0}, {"Type": 3, "Value": 2}, {"Type": 4, "Value": 1}
+			]
+		},
+		{
+			"Level": 6,
+			"Bonus": [
+				{"Type": 100, "Value": 2}, {"Type": 1, "Value": -2}, {"Type": 2, "Value": 0}, {"Type": 3, "Value": 2}, {"Type": 4, "Value": 1}
+			]
+		},
+		{
+			"Level": 7,
+			"Bonus": [
+				{"Type": 100, "Value": 2}, {"Type": 1, "Value": -2}, {"Type": 2, "Value": 0}, {"Type": 3, "Value": 2}, {"Type": 4, "Value": 1}
+			]
+		},
+		{
+			"Level": 8,
+			"Bonus": [
+				{"Type": 100, "Value": 2}, {"Type": 1, "Value": -2}, {"Type": 2, "Value": 0}, {"Type": 3, "Value": 2}, {"Type": 4, "Value": 1}
+			]
+		},
+		{
+			"Level": 9,
+			"Bonus": [
+				{"Type": 100, "Value": 2}, {"Type": 1, "Value": -2}, {"Type": 2, "Value": 0}, {"Type": 3, "Value": 2}, {"Type": 4, "Value": 1}
+			]
+		},
+		{
+			"Level": 10,
+			"Bonus": [
+				{"Type": 100, "Value": 2}, {"Type": 1, "Value": -2}, {"Type": 2, "Value": 0}, {"Type": 3, "Value": 2}, {"Type": 4, "Value": 1}
+			]
+		}
+	]
+}

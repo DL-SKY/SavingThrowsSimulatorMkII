@@ -1,0 +1,11 @@
+{
+	"Type": 1,
+	"Content": {
+		"Type": 101,
+		"SerializedData": "{ \"SavingThrows\": [ {} ] }"
+	},
+	"Visual": {
+		"Name": "",
+		"Description": ""
+	}
+}

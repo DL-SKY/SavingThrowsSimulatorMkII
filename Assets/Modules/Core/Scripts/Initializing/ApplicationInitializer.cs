@@ -54,10 +54,16 @@ namespace Modules.Core.Initializing
         private void OnCompleted()
         {
             UnityEngine.Debug.LogError($"[ApplicationInitializer] OnCompleted()");
+
+            //test
+            //var database = ComponentLocator.Resolve<DataBaseManager>();
+            //UnityEngine.Debug.LogError($"database.Races.Count: {database.Races.Count}");
+            //UnityEngine.Debug.LogError($"database.Races[Human].Bonus: {string.Join<Parameter>(", ", database.Races["Human"].Bonus)}");
+
             //TODO
 
             //...
-            
+
 
             Destroy(this.gameObject);
         }

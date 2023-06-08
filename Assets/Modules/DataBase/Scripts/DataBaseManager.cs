@@ -38,7 +38,12 @@ namespace Modules.DataBase
         protected void FillProperties(Property[] properties)
         {
             foreach (var property in properties)
-                property.Data = _propertyProvider.GetPropertyData(property.Type, property.SerializedData);
+                FillProperty(property);
+        }
+
+        protected void FillProperty(Property property)
+        {
+            property.Data = _propertyProvider.GetPropertyData(property.Type, property.SerializedData);
         }
 
 
