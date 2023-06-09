@@ -3,8 +3,10 @@
 namespace Modules.Game.Enums
 {
     [Serializable]
-    public enum EnemyType
+    public enum ActionType
     {
-        Human,
+        Resource,
+
+        Damage,
     }
 }

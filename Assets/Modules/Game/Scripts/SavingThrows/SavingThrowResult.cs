@@ -1,4 +1,4 @@
-﻿using Modules.Game.Actions.Data;
+﻿using Modules.Game.Actions;
 using System;
 
 namespace Modules.Game.SavingThrows

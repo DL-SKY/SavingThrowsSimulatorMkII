@@ -1,0 +1,24 @@
+{
+	"Visual": {
+		"Name": "",
+		"Description": ""
+	},
+	
+	"ChallengeRating": 1,
+	"Tags": [
+		"Human"
+	],
+	"MainParameter": 1,
+	"SavingThrows": [
+		{
+			"Parameter": 0,
+			"Difficulty": 8
+		}
+	],
+	"Result": {
+		"SuccessActions": [
+		],
+		"FailureActions": [
+		]
+	}
+}

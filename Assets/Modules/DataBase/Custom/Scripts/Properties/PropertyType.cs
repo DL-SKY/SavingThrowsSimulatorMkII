@@ -6,11 +6,11 @@ namespace Modules.DataBase.Custom.Properties
     public enum PropertyType
     {
         //Events - 10...
-        EventEnemy = 101,
-        EventTrap = 102,
+        //EventEnemy = 101,
+        //EventTrap = 102,
 
-        EventChest = 10101,
+        //EventChest = 10101,
 
-        EventNpc = 10201,
+        //EventNpc = 10201,
     }
 }

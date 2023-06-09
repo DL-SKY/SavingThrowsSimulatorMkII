@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Modules.DataBase.Providers
 {
+    //TODO: Отказаться от монобеха для провайдера
     public abstract class PropertyProvider : MonoBehaviour
     {
         public abstract PropertyData GetPropertyData(PropertyType type, string text);

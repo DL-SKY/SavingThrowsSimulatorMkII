@@ -1,5 +1,4 @@
 using Modules.DataBase.Custom.Properties;
-using Modules.DataBase.Custom.Properties.Events;
 using Modules.DataBase.Properties;
 using System;
 
@@ -12,14 +11,14 @@ namespace Modules.DataBase.Custom.Providers
             switch (type)
             {
                 //Events
-                case PropertyType.EventEnemy:
-                    return DeserializePropertyByText<EnemyPropertyData>(text);
-                case PropertyType.EventTrap:
-                    return DeserializePropertyByText<TrapPropertyData>(text);
-                case PropertyType.EventChest:
-                    return DeserializePropertyByText<ChestPropertyData>(text);
-                case PropertyType.EventNpc:
-                    return DeserializePropertyByText<NpcPropertyData>(text);                
+                //case PropertyType.EventEnemy:
+                //    return DeserializePropertyByText<EnemyPropertyData>(text);
+                //case PropertyType.EventTrap:
+                //    return DeserializePropertyByText<TrapPropertyData>(text);
+                //case PropertyType.EventChest:
+                //    return DeserializePropertyByText<ChestPropertyData>(text);
+                //case PropertyType.EventNpc:
+                //    return DeserializePropertyByText<NpcPropertyData>(text);                
 
                 default:
                     throw new Exception($"Unexpected property type {type}!");
