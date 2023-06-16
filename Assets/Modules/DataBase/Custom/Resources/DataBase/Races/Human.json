@@ -6,15 +6,15 @@
 	
 	"Bonus": [
 		{
-			"Type": 100,
+			"Tag": "Slot",
 			"Value": 1
 		},
 		{
-			"Type": 1,
+			"Tag": "Strenght",
 			"Value": 1
 		},
 		{
-			"Type": 2,
+			"Tag": "Dexterity",
 			"Value": 1
 		}
 	]

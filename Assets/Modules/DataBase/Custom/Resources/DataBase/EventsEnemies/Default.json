@@ -8,17 +8,27 @@
 	"Tags": [
 		"Human"
 	],
-	"MainParameter": 1,
+	"Tag": "Strenght",
 	"SavingThrows": [
 		{
-			"Parameter": 0,
+			"Tag": "Main",
 			"Difficulty": 8
 		}
 	],
 	"Result": {
 		"SuccessActions": [
+			{
+				"Tag": "NextTurn"
+			}
 		],
 		"FailureActions": [
+			{
+				"Tag": "Damage",
+				"SerializedData": "{ \"Tags\": [], \"Damage\": 1 }"
+			},
+			{
+				"Tag": "NextTurn"
+			}
 		]
 	}
 }

@@ -74,7 +74,7 @@ namespace Modules.Core.Custom.Initializing
 
         private void FillTasksList(ref List<Subtask> tasks)
         {
-            //TODO!!!!!!!!
+            //TODO: добавить нужные таски
 
             tasks.Add(new LoadDataBaseTask(ComponentLocator.Resolve<DataBaseManager>()));
             //...

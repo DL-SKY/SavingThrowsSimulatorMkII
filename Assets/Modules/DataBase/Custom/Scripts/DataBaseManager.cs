@@ -9,10 +9,6 @@ namespace Modules.Custom.DataBase
 {
     public class DataBaseManager : Modules.DataBase.DataBaseManager
     {
-        public Dictionary<string, CellData> Cells = new Dictionary<string, CellData>();
-        public Dictionary<string, GameplayData> GameplaySettings = new Dictionary<string, GameplayData>();
-        public Dictionary<string, UnitData> Units = new Dictionary<string, UnitData>();
-                
         public Dictionary<string, RaceData> Races = new Dictionary<string, RaceData>();
         public Dictionary<string, ClassData> Classes = new Dictionary<string, ClassData>();
         
@@ -34,10 +30,6 @@ namespace Modules.Custom.DataBase
 
         private void LoadDataBase()
         {
-            LoadCells();
-            LoadGameplaySettings();
-            LoadUnits();
-
             LoadRaces();
             LoadClasses();
             
@@ -45,28 +37,7 @@ namespace Modules.Custom.DataBase
             LoadEventsSettings();
 
             _completedCallback?.Invoke();
-        }
-
-        [Obsolete]
-        private void LoadCells()
-        {
-            var assets = Resources.LoadAll<TextAsset>(Path.Combine(_databasePath, "Cells"));
-            FillDictionary(Cells, assets);
-        }
-
-        [Obsolete]
-        private void LoadGameplaySettings()
-        {
-            var assets = Resources.LoadAll<TextAsset>(Path.Combine(_databasePath, "GameplaySettings"));
-            FillDictionary(GameplaySettings, assets);
-        }
-
-        [Obsolete]
-        private void LoadUnits()
-        {
-            var assets = Resources.LoadAll<TextAsset>(Path.Combine(_databasePath, "Units"));
-            FillDictionary(Units, assets);
-        }
+        }        
 
         private void LoadRaces()
         {

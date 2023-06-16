@@ -9,7 +9,10 @@ namespace Modules.DataBase.Custom.Datas
     [Serializable]
     public class ClassData: DataBaseData
     {
-        public ParameterType MainParameter;
+        public string Tag;
+        public ParameterType MainParameter => GetMainParameter();
+        private ParameterType _mainParameter = ParameterType.NA;
+
         public DiceType HitDice;
         public LevelParameters[] Bonus;
 
@@ -30,6 +33,14 @@ namespace Modules.DataBase.Custom.Datas
             foreach (var bonus in Bonus)
                 if (!BonusDic.ContainsKey(bonus.Level))
                     BonusDic.Add(bonus.Level, bonus.Bonus);
+        }
+
+        private ParameterType GetMainParameter()
+        {
+            if (_mainParameter == ParameterType.NA)
+                Enum.TryParse(Tag, out _mainParameter);
+
+            return _mainParameter;
         }
     }
 }

@@ -5,16 +5,17 @@ namespace Modules.Game.Enums
     [Serializable]
     public enum ParameterType
     {
+        NA = -1,
+
         /// <summary>
-        /// Используется для обозначения, что подразумевается MainParameter класса
+        /// Используется для обозначения, что подразумевается MainParameter класса. Абстракция "Основная боевая характеристика
         /// </summary>
-        //Абстракция "Основная боевая характеристика
         Main = 0,
 
         //Сила
-        Strenght = 1,        
+        Strenght = 1,
         //Ловкость
-        Dexterity = 2,        
+        Dexterity = 2,
         //Магия
         Magic = 3,
         //Внимание

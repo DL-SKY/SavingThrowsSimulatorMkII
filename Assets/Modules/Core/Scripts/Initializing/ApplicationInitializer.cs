@@ -60,7 +60,7 @@ namespace Modules.Core.Initializing
             //UnityEngine.Debug.LogError($"database.Races.Count: {database.Races.Count}");
             //UnityEngine.Debug.LogError($"database.Races[Human].Bonus: {string.Join<Parameter>(", ", database.Races["Human"].Bonus)}");
 
-            //TODO
+            //TODO: добавить действия после ApplicationInitializer.OnCompleted()
 
             //...
 
@@ -71,7 +71,7 @@ namespace Modules.Core.Initializing
         private void OnFailed(int errorCode)
         {
             UnityEngine.Debug.LogError($"[ApplicationInitializer] OnFailed({errorCode})");
-            //TODO
+            //TODO: доделать логику при провале инициализации игры ApplicationInitializer.OnFailed(int errorCode)
         }
 
         private List<Subtask> GetBeforeTasks()
@@ -88,7 +88,7 @@ namespace Modules.Core.Initializing
         {
             var tasks = new List<Subtask>();
 
-            //todo: temp ======
+            //TODO: удалить потом, это паузы для заметной работы прогресс бара при загрузке ======
             var updater = ComponentLocator.Resolve<Updater>();
             for (int i = 0; i < 10; i++)
                 tasks.Add(new PauseTask(updater, 0.2f, 1));
