@@ -15,6 +15,7 @@ namespace Modules.Core.Initializing.Subtasks
 
         public override void Run()
         {
+            //TODO: имплементация
             throw new NotImplementedException();
 
             var context = new Context();
