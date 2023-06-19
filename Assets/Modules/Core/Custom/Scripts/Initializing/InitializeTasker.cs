@@ -77,6 +77,7 @@ namespace Modules.Core.Custom.Initializing
             //TODO: добавить нужные таски
 
             tasks.Add(new LoadDataBaseTask(ComponentLocator.Resolve<DataBaseManager>()));
+            tasks.Add(new LoadContextTask());
             //...
             tasks.Add(new LoadSceneTask("Menu"));
             //...

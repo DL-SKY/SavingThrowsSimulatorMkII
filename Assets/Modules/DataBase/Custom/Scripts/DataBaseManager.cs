@@ -10,6 +10,7 @@ namespace Modules.Custom.DataBase
     public class DataBaseManager : Modules.DataBase.DataBaseManager
     {
         public Dictionary<string, RaceData> Races = new Dictionary<string, RaceData>();
+
         public Dictionary<string, ClassData> Classes = new Dictionary<string, ClassData>();
         
         public Dictionary<string, EventData> Events = new Dictionary<string, EventData>();

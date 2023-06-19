@@ -9,6 +9,14 @@ namespace Modules.Game.Custom.Context
     {
         public Dictionary<Type, IState> States => _states;
         private Dictionary<Type, IState> _states = new Dictionary<Type, IState>();
+
+        //TODO: добавить стейты в контекст
+        //...
+
+        public void Init()
+        { 
+        
+        }
     }
 }
 
