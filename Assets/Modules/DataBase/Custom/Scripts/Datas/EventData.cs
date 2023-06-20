@@ -17,7 +17,7 @@ namespace Modules.DataBase.Custom.Datas
         private EventType GetEventType()
         {
             if (_type == EventType.NA)
-                Enum.TryParse("Tag", out _type);
+                Enum.TryParse(Tag, out _type);
 
             return _type;
         }

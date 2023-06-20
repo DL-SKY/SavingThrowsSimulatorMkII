@@ -54,7 +54,7 @@ namespace Tests.DataBase.Tests
             {
                 var jsonString = File.ReadAllText(path);
                 var data = DataBaseHelper.Deserialize<RaceData>(jsonString);
-                data.Id = Path.GetFileName(path);
+                data.Id = Path.GetFileNameWithoutExtension(path);
                 _races.Add(data);
             }
         }
