@@ -25,23 +25,54 @@ namespace Tests.DataBase.Tests
         }
 
         [TestMethod]
+        public void TagTest()
+        {
+            Init();
+
+            foreach (var cl in _classes)
+            {
+                //Корректный тег - парсится в перечисление
+                Assert.IsTrue(Enum.TryParse<ParameterType>(cl.Tag, out var tag), $"File {cl.Id} has invalid main parameter Tag \"{cl.Tag}\"!");
+
+                //Тип является допустимой основной характеристикой
+                Assert.IsTrue( cl.MainParameter == ParameterType.Strenght
+                            || cl.MainParameter == ParameterType.Dexterity
+                            || cl.MainParameter == ParameterType.Magic, 
+                            $"File {cl.Id}");
+            }
+        }
+
+        [TestMethod]
         public void BonusTest()
         {
             Init();
 
             foreach (var cl in _classes)
             {
+                var levels = new HashSet<int>();
+
                 foreach (var level in cl.Bonus)
                 {
+                    //Отсутствие повторного уровень
+                    Assert.IsFalse(levels.Contains(level.Level), $"File {cl.Id} has double Level: {level.Level}!");
+                    levels.Add(level.Level);
+
+                    //Не пустое значение бонусов
+                    Assert.IsTrue(level.Bonus != null && level.Bonus.Length > 0, $"File {cl.Id} has empty Bonus!");
+
                     foreach (var bonus in level.Bonus)
                     {
                         //Корректность типа
                         Assert.IsTrue(Enum.TryParse<ParameterType>(bonus.Tag, out var type), $"File {cl.Id} has invalid Bonus Tag: \"{bonus.Tag}\" in Level: {level.Level}");
 
-                        //Повторение бонуса
-                        //Assert.IsTrue(race.Bonus.Count(x => x.Type == bonus.Type) == 1, $"File {race.Id} has double Bonus Type \"{bonus.Type}\"");
+                        //Нет повторение бонуса
+                        Assert.IsTrue(level.Bonus.Count(x => x.Type == bonus.Type) == 1, $"File {cl.Id} has double Bonus Type \"{bonus.Type}\"");
                     }
                 }
+
+                //Заполненность интервала уровней
+                for (int i = levels.Min(); i <= levels.Max(); i++)
+                    Assert.IsTrue(levels.Contains(i), $"File {cl.Id} has not level: {i}!");
             }
         }
 

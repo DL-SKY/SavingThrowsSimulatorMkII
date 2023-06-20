@@ -30,14 +30,17 @@ namespace Tests.DataBase.Tests
             Init();
 
             foreach (var race in _races)
-            {                
+            {
+                //Не пустое значение бонусов
+                Assert.IsTrue(race.Bonus != null && race.Bonus.Length > 0, $"File {race.Id} has empty Bonus!");
+
                 foreach (var bonus in race.Bonus)
                 {
-                    //Корректность типа
-                    Assert.IsTrue(Enum.TryParse<ParameterType>(bonus.Tag, out var type), $"File {race.Id} has invalid Bonus Tag: \"{bonus.Tag}\"");
+                    //Корректность типа бонуса
+                    Assert.IsTrue(Enum.TryParse<ParameterType>(bonus.Tag, out var type), $"File {race.Id} has invalid Bonus Tag: \"{bonus.Tag}\"!");
 
-                    //Повторение бонуса
-                    Assert.IsTrue(race.Bonus.Count(x => x.Type == bonus.Type) == 1, $"File {race.Id} has double Bonus Type \"{bonus.Type}\"");
+                    //Нет повторение бонуса
+                    Assert.IsTrue(race.Bonus.Count(x => x.Type == bonus.Type) == 1, $"File {race.Id} has double Bonus Type \"{bonus.Type}\"!");
                 }
             }
         }
