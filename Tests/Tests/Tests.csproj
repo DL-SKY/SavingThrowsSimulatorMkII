@@ -96,6 +96,7 @@
     <Compile Include="DataBase\Data\ClassData.cs" />
     <Compile Include="DataBase\Data\EventData.cs" />
     <Compile Include="DataBase\Data\RaceData.cs" />
+    <Compile Include="DataBase\Tests\ActionsTester.cs" />
     <Compile Include="DataBase\Tests\ClassesTests.cs" />
     <Compile Include="DataBase\Tests\EventsTests.cs" />
     <Compile Include="DataBase\Tests\RacesTests.cs" />
