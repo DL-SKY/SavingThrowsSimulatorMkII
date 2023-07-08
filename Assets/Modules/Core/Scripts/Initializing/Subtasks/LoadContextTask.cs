@@ -1,4 +1,5 @@
 ﻿using Modules.Game.Custom.Context;
+using Modules.StarterKIT.Services;
 using System;
 
 namespace Modules.Core.Initializing.Subtasks
@@ -20,6 +21,8 @@ namespace Modules.Core.Initializing.Subtasks
 
             var context = new Context();
             context.Init();
+
+            ComponentLocator.Register(context);
         }
     }
 }
